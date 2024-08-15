@@ -11,7 +11,7 @@ route.post('/login', authControllers.login);
 
 route.get('/signup', authControllers.getSignUp);
 
-route.post('/signup', authControllers.signup);
+route.post('/signup',authControllers.signup);
 
 
 

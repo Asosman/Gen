@@ -30,8 +30,8 @@ static async findUserById(id){
   return db.getDb().collection('user').findOne({email:this.email});   
  }
  
- userExistAlready(){
-    const existingUser = this.getUserWithThesameEmail();
+ async userExistAlready(){
+    const existingUser = await this.getUserWithThesameEmail();
     if(existingUser){
         return true;
     }else{
@@ -40,7 +40,7 @@ static async findUserById(id){
  }
  async signup(){
     const hashedPassword = await bcrypt.hash(this.password, 12);
-    const result = await db.getDb().insertOne({
+    const result = await db.getDb().collection('user').insertOne({
         email:this.email,
         password:hashedPassword,
         name:this.name,
