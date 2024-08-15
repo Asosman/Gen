@@ -1,0 +1,41 @@
+h1{
+    color: var(--color-gray-300);
+    text-align: center;
+    font:'Roboto',sans-serif;
+}
+
+.main{
+    background:linear-gradient(180deg,rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.4) 100%),url('/img/FB1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+    position:relative;
+    top:0;
+    left:0;
+    padding-top: 3rem;
+    height:100vh;
+    /* height: 100%; */
+    width:100%;
+}
+
+form{
+    max-width: 25rem;
+    margin: var(--space-8) auto;
+    padding:var(--space-4);
+    background-color:rgba(255,255,255,0.2);
+    filter:blur(0.2);
+    border:2px solid #fff;
+    border-radius:var(--border-radius-small);
+    box-shadow:var(--shadow-medium);
+    text-align: center;
+    
+}
+
+form a{
+    color: var(--color-primary-200);
+}
+
+form a:hover,
+form a:active{
+    color:var(--color-primary-400)
+}

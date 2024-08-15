@@ -1,0 +1,49 @@
+<%-include('../../shared/includes/head',{title:'Sign up'})%>
+<link rel="stylesheet" href="/styles/auth.css">
+<link rel="stylesheet" href="/styles/form.css"> 
+  </head>
+
+  <body>
+    <%-include('../../shared/includes/header')%>
+      <main>
+      <div class="main">
+          <h1>Sign up</h1>
+          <form  action="/signup" method="POST">
+            <input type="hidden" name="_csrf" value="<%=locals.csrfToken%>">
+            <div class="form-control">
+              <label for="email">Email</label>
+              <input type="text" id="email" name="email" >
+            </div>
+            <div class="form-control">
+              <label for="Confirm-email">Confirm email</label>
+              <input type="email"  name="Confirm-email" >
+            </div>
+            <div class="form-control">
+              <label for="password">Password</label>
+              <input type="password"  name="password" >
+            </div>
+            <div class="form-control">
+              <label for="name">Full name</label>
+              <input type="text"  name="name" >
+            </div>
+            <div class="form-control">
+              <label for="Phone">Phone Number</label>
+              <input type="number"  name="phone" >
+            </div>
+            <div class="form-control">
+              <label for="state">State</label>
+              <input type="text"  name="state" >
+            </div>
+
+            <div class="form-control">
+              <label for="city">City</label>
+              <input type="text"  name="city" >
+            </div>
+            <div class="form-action">
+              <button type="submit" class="btn">Sign up</button>
+              <a href="/login">already have an account </a>
+            </div>
+          </form>
+        </div>
+      </main>
+      <%-include('../../shared/includes/footer')%>

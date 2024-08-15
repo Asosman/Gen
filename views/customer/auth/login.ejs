@@ -1,0 +1,29 @@
+<%-include('../../shared/includes/head',{title:'log in'})%>
+<link rel="stylesheet" href="/styles/auth.css">
+<link rel="stylesheet" href="/styles/form.css"> 
+  </head>
+
+  <body>
+    <%-include('../../shared/includes/header')%>
+    <main>
+      <div class="main">
+      <h1>Log in</h1>
+     <form>
+      <input type="hidden" name="_csrf" value="<%=locals.csrfToken%>">
+      <div class="form-control">
+        <label for="username" >Email</label>
+        <input type="text"  id="username" name="username" required>
+      </div>
+      <div class="form-control">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" minlength="6" required>
+      </div>
+      <div class="form-action">
+        <button type="submit" class="btn">Login</button>
+       <a href="/signup">Create a new account</a>
+      </div>
+    </form> 
+  </div>
+    </main>
+    
+<%-include('../../shared/includes/footer') %>
