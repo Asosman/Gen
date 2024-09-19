@@ -66,6 +66,8 @@
   white-space: pre-wrap;
 }
 
+
+
 @media (min-width: 48rem) {
   #product-details header {
     display: flex;

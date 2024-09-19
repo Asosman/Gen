@@ -51,6 +51,18 @@ main {
   margin: 0 auto;
 }
 
+.product-data{
+  display:flex;
+  justify-content: center;
+}
+
+.category{
+  height: 100vh;
+  background-color: red;
+  width:200px;
+}
+
+
 ul, 
 ol {
   list-style: none;

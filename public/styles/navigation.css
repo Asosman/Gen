@@ -189,6 +189,7 @@ header{
 
 .search{
   margin-right: var(--space-6);
+  display: flex;
 }
 
 .search input, .search button{
