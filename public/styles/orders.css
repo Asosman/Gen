@@ -1,9 +1,10 @@
 
 .order-item {
-  background-color: var(--color-gray-400);
+  background-color: var(--color-gray-300);
   border-radius: var(--border-radius-small);
   padding: var(--space-4);
   margin: var(--space-4) 0;
+  color:white;
 }
 
 .order-summary {
@@ -23,7 +24,7 @@
 }
 
 .order-item-price {
-  color: var(--color-primary-500);
+  color: var(--color-primary-500-contrast);
 }
 
 .order-item .status {

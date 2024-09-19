@@ -33,3 +33,8 @@ input, textarea {
   object-fit: cover;
   border-radius: var(--border-radius-small);
 }
+
+form.product{
+  background-color: var(--color-gray-600);
+ padding:1rem 0 1rem 2rem;
+}

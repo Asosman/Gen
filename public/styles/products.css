@@ -8,7 +8,9 @@
 .product-item {
   border-radius: var(--border-radius-medium);
   text-align: center;
-  background-color: var(--color-gray-600);
+  background-color: var(--color-primary-500-contrast);
+  border:1px solid var(--color-gray-600);
+  box-shadow:var(--shadow-medium); ;
   overflow: hidden;
 }
 
@@ -41,7 +43,7 @@
 #product-details header {
   margin-top: var(--space-8);
   padding: var(--space-8);
-  background-color: var(--color-gray-600);
+  background-color: white; 
   gap: var(--space-8);
 }
 
@@ -58,7 +60,7 @@
 }
 
 #product-description {
-  background-color: var(--color-primary-500-bg);
+  /* background-color: var(--color-primary-500-bg); */
   padding: var(--space-8);
   margin-top:4rem;
   white-space: pre-wrap;

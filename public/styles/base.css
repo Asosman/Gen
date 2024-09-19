@@ -40,8 +40,8 @@ html {
 }
 
 body {
-  background-color: var(--color-gray-500);
-  color: var(--color-gray-100);
+  background-color: var(--color-primary-500-contrast);
+  color: var(--color-gray-500);
   margin: 0;
 }
 
