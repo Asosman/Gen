@@ -1,17 +1,17 @@
 <header>
-    <div class="mobile-menu_handular">
-      <span></span>
-      <span></span>
-      <span></span>
+  <div class="mobile-menu_handular">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <div class="main-menu">
+      <%-include('nav-items')%>
+  </div>
+    <div class="search">
+      <input type="text" name="userinput" placeholder="search"/>
+      <button>Search</button>
     </div>
-    <div class="main-menu">
-        <%-include('nav-items')%>
-    </div>
-      <div class="search">
-        <input type="text" name="userinput" placeholder="search"/>
-        <button>Search</button>
-      </div>
-  </header>
-  <aside class="mobile-menu">
-    <%-include('nav-items') %>
-  </aside>
+</header>
+<aside class="mobile-menu">
+  <%-include('nav-items') %>
+</aside>

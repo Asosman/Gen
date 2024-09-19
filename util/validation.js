@@ -1,20 +1,28 @@
-function isEmpty(value){
-    return value && value.trim()== '';
+function isEmpty(value) {
+  return !value || value.trim() === '';
 }
 
-function userEmailPasswordValid(email,password, phone){
-    return email && email.includes('@') && password && password.trim() > 5 && phone.trim() === 11  ;
+function userCredentialsAreValid(email, password) {
+  return (
+    email && email.includes('@') && password && password.trim().length >= 6
+  );
 }
 
-function emailAreConfirmed(email, confirmEmail){
-    return email && confirmEmail;
+function userDetailsAreValid(email, password, name, street, postal, city) {
+  return (
+    userCredentialsAreValid(email, password) &&
+    !isEmpty(name) &&
+    !isEmpty(street) &&
+    !isEmpty(postal) &&
+    !isEmpty(city)
+  );
 }
 
-function userCredentialsAreValid(email, password, phone, name,state,city){
-   return userEmailPasswordValid(email,password,phone) && isEmpty(name) && isEmpty(state) && isEmpty(city)
+function emailIsConfirmed(email, confirmEmail) {
+  return email === confirmEmail;
 }
 
-module.exports ={
-    emailAreConfirmed: emailAreConfirmed,
-    userCredentialsAreValid:userCredentialsAreValid
-}
+module.exports = {
+  userDetailsAreValid: userDetailsAreValid,
+  emailIsConfirmed: emailIsConfirmed,
+};

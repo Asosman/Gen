@@ -1,29 +1,29 @@
-<%-include('../../shared/includes/head',{title:'log in'})%>
-<link rel="stylesheet" href="/styles/auth.css">
-<link rel="stylesheet" href="/styles/form.css"> 
-  </head>
-
-  <body>
-    <%-include('../../shared/includes/header')%>
-    <main>
-      <div class="main">
-      <h1>Log in</h1>
-     <form action="/login" method="POST">
-      <input type="hidden" name="_csrf" value="<%=locals.csrfToken%>">
-      <div class="form-control">
-        <label for="email" >Email</label>
-        <input type="text"  name="email" required>
-      </div>
-      <div class="form-control">
+<%- include('../../shared/includes/head', { pageTitle: 'Login' }) %>
+  <link rel="stylesheet" href="/styles/forms.css">
+  <link rel="stylesheet" href="/styles/auth.css">
+</head>
+<body>
+  <%- include('../../shared/includes/header') %>
+  <main>
+    <h1>Login</h1>
+    <% if (inputData.errorMessage) { %>
+      <section class="alert">
+        <h2>Invalid Credentials</h2>
+        <p><%= inputData.errorMessage %></p>
+      </section>
+    <% } %>
+    <form action="/login" method="POST">
+      <input type="hidden" name="_csrf" value="<%= locals.csrfToken %>">
+      <p>
+        <label for="email">E-Mail</label>
+        <input type="email" id="email" name="email" value="<%= inputData.email %>" required>
+      </p>
+      <p>
         <label for="password">Password</label>
-        <input type="password" id="password" name="password" minlength="6" required>
-      </div>
-      <div class="form-action">
-        <button type="submit" class="btn">Login</button>
-       <a href="/signup">Create a new account</a>
-      </div>
-    </form> 
-  </div>
-    </main>
-    
-<%-include('../../shared/includes/footer') %>
+        <input type="password" id="password" name="password" value="<%= inputData.password %>" required>
+      </p>
+      <button class="btn">Login</button>
+      <p id="switch-form"><a href="/signup">Create a new user</a></p>
+    </form>
+  </main>
+<%- include('../../shared/includes/footer') %>
